@@ -4,31 +4,25 @@ CNN 모델을 활용하여 주어진 이미지가 세 종류의 사과 품종 �
 
 ## 1. 프로젝트 개요
 
-* 
-**목적**: 사과 품종으로 인한 오분류 문제를 해결 가능한 경량화된 분류 모델 구축 
+* **목적**: 사과 품종으로 인한 오분류 문제를 해결 가능한 경량화된 분류 모델 구축 
 
 
-* 
-**기간**: 2025년 12월 29일 - 30일 
+* **기간**: 2025년 12월 29일 - 30일 
 
 
-* 
-**참여 인원**: 1명 (개인 프로젝트) 
+* **참여 인원**: 1명 (개인 프로젝트) 
 
 
 
 ## 2. 사용 기술 (Tech Stack)
 
-* 
-**Language**: Python 3.13.9 
+* **Language**: Python 3.13.9 
 
 
-* 
-**Framework**: Keras 
+* **Framework**: Keras 
 
 
-* 
-**Libraries**: NumPy, Matplotlib, Pathlib, Pillow 
+* **Libraries**: NumPy, Matplotlib, Pathlib, Pillow 
 
 
 
@@ -36,12 +30,10 @@ CNN 모델을 활용하여 주어진 이미지가 세 종류의 사과 품종 �
 
 ### 3.1 데이터 개요
 
-* 
-**출처**: Kaggle Fruit recognition by Chris Gorgolewski 
+* **출처**: Kaggle Fruit recognition by Chris Gorgolewski 
 
 
-* 
-**구성**: 총 2,384장의 RGB 이미지 
+* **구성**: 총 2,384장의 RGB 이미지 
 
 
 * 품종 A: 692장 
@@ -112,20 +104,16 @@ CNN 모델을 활용하여 주어진 이미지가 세 종류의 사과 품종 �
 
 ### 4.2 학습 설정
 
-* 
-**Optimizer**: Adam (learning rate: 0.0003) 
+* **Optimizer**: Adam (learning rate: 0.0003) 
 
 
-* 
-**Loss function**: Sparse Categorical Crossentropy 
+* **Loss function**: Sparse Categorical Crossentropy 
 
 
-* 
-**Callback**: 5번 이상 검증 손실 발생 시 종료
+* **Callback**: 5번 이상 검증 손실 발생 시 종료
 
 
-* 
-**Epoch**: 100 
+* **Epoch**: 100 
 
 
 
@@ -133,8 +121,7 @@ CNN 모델을 활용하여 주어진 이미지가 세 종류의 사과 품종 �
 
 ### 5.1 시도별 결과
 
-* 
-**1차 시도**: Accuracy는 높아지고 loss는 낮아졌으나, Validation 과정에서 문제 발생 (과적합 추정) 
+* **1차 시도**: Accuracy는 높아지고 loss는 낮아졌으나, Validation 과정에서 문제 발생 (과적합 추정) 
 
 
 * **1차 코드 수정**:
@@ -149,8 +136,7 @@ CNN 모델을 활용하여 주어진 이미지가 세 종류의 사과 품종 �
 
 
 
-* 
-**2차 시도**: 여전히 같은 문제 지속, Validation accuracy가 0.4559로 고정됨 
+* **2차 시도**: 여전히 같은 문제 지속, Validation accuracy가 0.4559로 고정됨 
 
 
 * **2차 코드 수정**:
@@ -162,8 +148,7 @@ CNN 모델을 활용하여 주어진 이미지가 세 종류의 사과 품종 �
 
 
 
-* 
-**3차 시도**: Validation accuracy 하락 및 Loss 상승 문제 지속 
+* **3차 시도**: Validation accuracy 하락 및 Loss 상승 문제 지속 
 
 
 
@@ -189,13 +174,10 @@ CNN 모델을 활용하여 주어진 이미지가 세 종류의 사과 품종 �
 
 
 
-
-* 
-**전이 학습 (Transfer Learning) 도입**: 사전에 큰 데이터셋으로 학습된 모델을 사용하여 복잡한 분류 문제 해결 및 특징 추출 효율화 
+* **전이 학습 (Transfer Learning) 도입**: 사전에 큰 데이터셋으로 학습된 모델을 사용하여 복잡한 분류 문제 해결 및 특징 추출 효율화 
 
 
-* 
-**이미지 증강**: 밝기나 대조 수치를 조절해 빛 관련 노이즈에 강한 모델 제작 
+* **이미지 증강**: 밝기나 대조 수치를 조절해 빛 관련 노이즈에 강한 모델 제작 
 
 
 
